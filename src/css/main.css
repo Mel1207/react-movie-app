@@ -4,7 +4,8 @@
   box-sizing: border-box;
   font-family: sans-serif;
 }
-
-div {
+* div, html div {
   font-size: 25px;
 }
+
+/*# sourceMappingURL=main.css.map */
