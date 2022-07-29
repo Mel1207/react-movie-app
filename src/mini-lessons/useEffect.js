@@ -1,4 +1,3 @@
-import './css/main.css';
 import { useState, useEffect } from 'react';
 
 

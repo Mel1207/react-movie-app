@@ -1,10 +1,10 @@
 import './css/main.css';
-import UseState from './mini-lessons/UseState';
+import UseEffect from './mini-lessons/UseEffect'
 
 const App = () => {
   return (
     <div className="App">
-      <UseState />
+      <h1>hey there</h1>
     </div>
   );
 }
