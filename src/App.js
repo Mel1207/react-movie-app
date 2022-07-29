@@ -1,9 +1,10 @@
 import './css/main.css';
+import UseState from './mini-lessons/UseState';
 
 const App = () => {
   return (
     <div className="App">
-      <h1>Hey there my friends</h1>
+      <UseState />
     </div>
   );
 }

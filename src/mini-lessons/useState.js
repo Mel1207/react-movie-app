@@ -1,4 +1,3 @@
-import './css/main.css';
 import { useState } from 'react';
 
 
@@ -7,9 +6,9 @@ const App = () => {
 
   return (
     <div className="App">
-      <button onClick={() => setCounter((prevCount) => prevCount - 1)}>decrement -</button>
+      <button onClick={() => setCounter(prevCount => prevCount - 1 )}>decrement -</button>
       <h1>{counter}</h1>
-      <button onClick={() => setCounter((prevCount) => prevCount + 1)}>increment +</button>
+      <button onClick={() => setCounter(prevCount => prevCount + 1)}>increment +</button>
     </div>
   );
 }
