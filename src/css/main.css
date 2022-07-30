@@ -1,11 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
 *, html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: "Open Sans", sans-serif;
+  color: #323232;
 }
-* div, html div {
-  font-size: 25px;
+
+.container {
+  width: 85%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.page-title {
+  text-align: center;
+  margin: 5vh 0;
+}
+
+.card-movie {
+  width: 320px;
+  height: auto;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.card-movie .card-img {
+  width: 100%;
+  height: 320px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.card-movie h3 {
+  color: #323232;
+  margin-bottom: 3px;
+  margin-top: 10px;
+}
+.card-movie .card-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card-movie .movie {
+  padding: 3px 10px;
+  font-size: 12px;
+  background: #3d64e1;
+  color: #fff;
+  border-radius: 30px;
 }
 
 /*# sourceMappingURL=main.css.map */
