@@ -47,7 +47,9 @@ body {
 }
 
 .card-movie {
-  width: 320px;
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
   height: auto;
   background: #ffffff;
   padding: 20px;
@@ -79,6 +81,23 @@ body {
   background: #3d64e1;
   color: #fff;
   border-radius: 30px;
+}
+
+.movies-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+@media screen and (max-width: 780px) {
+  .movies-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 520px) {
+  .movies-container {
+    grid-template-columns: 1fr;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

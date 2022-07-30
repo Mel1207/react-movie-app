@@ -1,26 +1,19 @@
 import './css/main.css';
-import { useEffect } from 'react';
+import { useEffect, useState  } from 'react';
 import IconSearch from './assets/icon-search.svg'
 import CardMovie from './components/CardMovie';
 
 const apiURL = 'http://www.omdbapi.com?apikey=d93aeb11'
 // d93aeb11
 
-const movie = {
-  "Title": "Superman Returns",
-  "Year": "2006",
-  "imdbID": "tt0348150",
-  "Type": "movie",
-  "Poster": "https://m.media-amazon.com/images/M/MV5BNzY2ZDQ2MTctYzlhOC00MWJhLTgxMmItMDgzNDQwMDdhOWI2XkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg"
-  // "Poster": "N/A"
-}
-
 const App = () => {
+  const [movies, setMovies] = useState([]);
+
   const searchMovies = async (title) => {
     const response = await fetch(`${apiURL}&s=${title}`);
     const data = await response.json();
 
-    console.log(data.Search)
+    setMovies(data.Search)
   }
 
   useEffect(() => {
@@ -43,9 +36,20 @@ const App = () => {
             onClick={() => {alert('item search')}}
           />
         </div>
-        <CardMovie movie={movie}/>
+
+        {
+          movies?.length > 0 
+            ? (
+              <div className='movies-container'>
+                {movies.map(item => ( <CardMovie movie={item}/>))}
+              </div>
+            ) : (
+              <div>
+                <h2>No Movies found</h2>
+              </div>
+            )
+        }
       </div>
-     
     </div>
   );
 }
